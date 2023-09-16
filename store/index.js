@@ -4,7 +4,7 @@ import thunk from "redux-thunk";
 import storage from "redux-persist/lib/storage";
 import { persistReducer } from "redux-persist";
 import cart from "./cartSlice";
-const reducers = combineReducers({cart});
+const reducers = combineReducers({ cart });
 
 const config = {
     key: "root",
@@ -14,7 +14,7 @@ const config = {
 const reducer = persistReducer(config, reducers);
 
 const store = configureStore({
-    reducer:reducer,
+    reducer: reducer,
     devTools: process.env.NODE_ENV !== "production",
     middleware: [thunk],
 });
